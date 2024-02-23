@@ -182,16 +182,8 @@ section {
   color: #eee;
 }
 /* navbar start */
-#mainNavigation .navigation{
-  background: #18d26e;
-}
 #mainNavigation .navigation .image img{
-  width: 8%;
-}
-@media (max-width:678px){
-  #mainNavigation .navigation .image img{
-    width: 6%;
-  }
+  width: 6%;
 }
 #mainNavigation a {
   font-family: 'Cabin', sans-serif;
@@ -301,7 +293,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   }
 }
  /* icon section end */
- .icons-container{
+ .icon-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.icon-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-container .row .column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.icon-container .row .column .card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #777 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.icon-container .row .column .card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+.icon-container .row .column .card p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-container .row .column .card .icon-wrapper {
+  background-color: #777;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.icon-container .row .column .card:hover {
+  background-position: 0 100%;
+}
+.icon-container .row .column .card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #777;
+}
+.icon-container .row .column .card:hover h3 {
+  color: #ffffff;
+}
+.icon-container .row .column .card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  .icon-container {
+    padding: 0 2em;
+  }
+  .icon-container .row .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .icon-container {
+    padding: 1em 3em;
+  }
+  .icon-container .row .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+ /* .icons-container{
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
@@ -334,7 +409,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .icons-container .icons p{
   font-size: clamp(14px, 4vw, 16px);
   color: var(--light-color);
-}
+} */
  /* .............................. */
 
 /* about section start */
